@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import map from "../Image/img-lol-map.svg";
 import MapContents from "./mapContents";
-import Slider from './slider';
+
 class Map extends Component {
   stylemap = {
     position: "relative",
@@ -17,7 +17,6 @@ class Map extends Component {
           <div className="map-container" style={this.stylemap}>
             {/* <img src={map} alt="map" style={{ position: "absolute" }} /> */}
             <MapContents />
-            
           </div>
         </main>
       </React.Fragment>

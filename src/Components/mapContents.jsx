@@ -383,6 +383,7 @@ class MapContents extends Component {
     margin: 0,
     padding: 0,
   };
+  
   render() {
     return (
       <ul style={this.unorderedListStyle}>
