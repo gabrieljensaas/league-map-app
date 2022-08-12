@@ -8,8 +8,9 @@ class Map extends Component {
     width: 300,
     height: 300,
     backgroundImage: `URL(${map})`,
+    // backgroundImage:
+    //   "URL(http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map11.png)",
   };
-
   render() {
     return (
       <React.Fragment>

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Baron from "./baron";
+import Dragon from "./dragon";
+import RiftHerald from "./riftHerald";
 import Tower from "./tower";
 
 class MapContent extends Component {
@@ -183,8 +186,20 @@ class MapContent extends Component {
       "url"
     );
 
-    const nexusMidLane1 = Tower("MID_LANE", "NEXUS_TURRET", "1748", "2270", "url");
-    const nexusMidLane2 = Tower("MID_LANE", "NEXUS_TURRET", "2177", "1807", "url");
+    const nexusMidLane1 = Tower(
+      "MID_LANE",
+      "NEXUS_TURRET",
+      "1748",
+      "2270",
+      "url"
+    );
+    const nexusMidLane2 = Tower(
+      "MID_LANE",
+      "NEXUS_TURRET",
+      "2177",
+      "1807",
+      "url"
+    );
     const redNexusMidLane1 = Tower(
       "MID_LANE",
       "NEXUS_TURRET",
@@ -199,6 +214,18 @@ class MapContent extends Component {
       "12612",
       "url"
     );
+
+    // Dragon
+    const fireDragon = Dragon(9866, 4416, "url");
+    const airDragon = Dragon(9866, 4416, "url");
+    const waterDragon = Dragon(9866, 4414, "url");
+
+    // Baron
+    const baron = Baron(5007, 10471, "url");
+
+    // herald
+    // const riftHerald1 = RiftHerald(4594, 10392, "url");
+    // const riftHerald2 = RiftHerald(4772, 9896, "url");
 
     return (
       <React.Fragment>
@@ -218,7 +245,7 @@ class MapContent extends Component {
             </li>
           ))}
         </div> */}
-        <div className="tower-blue">
+        {/* <div className="tower-blue">
           <div className="nexus">
             <li
               className="mid"
@@ -369,8 +396,8 @@ class MapContent extends Component {
               InnB
             </li>
           </div>
-        </div>
-        <div className="tower-red">
+        </div> */}
+        {/* <div className="tower-red">
           <div className="nexus">
             <li
               className="mid"
@@ -521,6 +548,33 @@ class MapContent extends Component {
               InnB
             </li>
           </div>
+        </div> */}
+        <div className="dragon">
+          {/* make a condition to show only one dragon based on first spawned dragon at game time 5min */}
+          <li
+            style={setPosStyle(
+              fireDragon.posX,
+              fireDragon.posY,
+              fireDragon.imgURL
+            )}
+          >FD</li>
+          <li
+            style={setPosStyle(
+              airDragon.posX,
+              airDragon.posY,
+              airDragon.imgURL
+            )}
+          >AD</li>
+          <li
+            style={setPosStyle(
+              waterDragon.posX,
+              waterDragon.posY,
+              waterDragon.imgURL
+            )}
+          >WD</li>
+        </div>
+        <div className="Baron">
+          <li style={setPosStyle(baron.posX, baron.posY, baron.imgURL)}>B</li>
         </div>
       </React.Fragment>
     );
