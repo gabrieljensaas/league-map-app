@@ -229,7 +229,7 @@ class MapContent extends Component {
 
     return (
       <React.Fragment>
-        {/* <div className="champion">
+        <div className="champion">
           {this.participants.map((participant, index) => (
             <li
               key={index}
@@ -244,8 +244,8 @@ class MapContent extends Component {
               P{index + 1}
             </li>
           ))}
-        </div> */}
-        {/* <div className="tower-blue">
+        </div>
+        <div className="tower-blue">
           <div className="nexus">
             <li
               className="mid"
@@ -396,8 +396,8 @@ class MapContent extends Component {
               InnB
             </li>
           </div>
-        </div> */}
-        {/* <div className="tower-red">
+        </div>
+        <div className="tower-red">
           <div className="nexus">
             <li
               className="mid"
@@ -548,7 +548,7 @@ class MapContent extends Component {
               InnB
             </li>
           </div>
-        </div> */}
+        </div>
         <div className="dragon">
           {/* make a condition to show only one dragon based on first spawned dragon at game time 5min */}
           <li
@@ -557,21 +557,27 @@ class MapContent extends Component {
               fireDragon.posY,
               fireDragon.imgURL
             )}
-          >FD</li>
+          >
+            FD
+          </li>
           <li
             style={setPosStyle(
               airDragon.posX,
               airDragon.posY,
               airDragon.imgURL
             )}
-          >AD</li>
+          >
+            AD
+          </li>
           <li
             style={setPosStyle(
               waterDragon.posX,
               waterDragon.posY,
               waterDragon.imgURL
             )}
-          >WD</li>
+          >
+            WD
+          </li>
         </div>
         <div className="Baron">
           <li style={setPosStyle(baron.posX, baron.posY, baron.imgURL)}>B</li>
